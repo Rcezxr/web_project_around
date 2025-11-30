@@ -14,7 +14,6 @@
   </head>
   <title>Around the us</title>
   <body>
-    <script src="scripts/script.js"></script>
     <div class="page">
       <header class="header">
         <div class="header__logo">
@@ -36,11 +35,17 @@
           </div>
           <div class="profile__info">
             <div class="profile__info-paragraph">
-              <p class="profile__info_name">Jacques Cousteau</p>
-              <p class="profile__info_text">Explorador</p>
+              <p class="profile__info_name" id="profile-name">
+                Jacques Cousteau
+              </p>
+              <p class="profile__info_text" id="profile-info">Explorador</p>
             </div>
             <div class="profile__button">
-              <button class="profile__button-info" type="button">
+              <button
+                class="profile__button-info"
+                type="button"
+                id="button-info"
+              >
                 <img src="images/Edit-Button.png" alt="edit btton" />
               </button>
             </div>
@@ -138,5 +143,27 @@
         </footer>
       </main>
     </div>
+    <div id="popup" class="popup">
+        <div class="popup__container">
+          <h2>editar perfil</h2>
+          <form class="form">
+            <input type="text" name="" id="" placeholder="nome" />
+            <input type="text" name="" id="" placeholder="sobre mim" />
+            <button type="submit">salvar</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup popup_opened">
+  <div class="popup__container">
+   <h2>editar perfil</h2>
+          <form class="form">
+            <input type="text" name="" id="" placeholder="nome" />
+            <input type="text" name="" id="" placeholder="sobre mim" />
+            <button type="submit">salvar</button>
+          </form>
+  </div>
+</div>
+    </div>
+    <script src="scripts/script.js"></script>
   </body>
 </html>

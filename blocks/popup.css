@@ -1,0 +1,14 @@
+.popup {
+  max-width: 430px;
+  display: none;
+  position: fixed;
+  margin: 195px 425px 195px 425px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.popup__container {
+  margin: 0 auto;
+  align-items: center;
+}
+.popup_opened {
+  display: flex;
+}
