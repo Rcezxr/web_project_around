@@ -5,6 +5,7 @@
 }
 
 .elements__grid {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 281px);
   gap: 20px;
@@ -12,6 +13,7 @@
 }
 
 .card {
+  width: 100%;
   width: 281px;
   background: white;
   border-radius: 10px;
@@ -47,7 +49,6 @@
   font-weight: 900;
 }
 
-/* LIKE */
 .card__like {
   margin: 0;
   padding: 0;
