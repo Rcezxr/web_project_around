@@ -1,15 +1,29 @@
-const buttonInfo = document.getElementById("button-info");
+const editButton = document.getElementById("profile__button-info");
 const popup = document.getElementById("popup");
-const openPopup = document.getElementById("popup_opened");
+const closePopup = document.getElementById("close-popup");
+const submit = document.getElementById("submit");
 
-buttonInfo.addEventListener("click", () => {
-  const nome = document.getElementById("profile-name");
-  const info = document.getElementById("profile-info");
+const inputName = document.getElementById("name-input");
+const inputAbout = document.getElementById("about-input");
 
-  document.getElementById("profile-name").placeholder = nome;
-  document.getElementById("profile-info").placeholder = info;
-  popup.classList.add("popup_opened");
+const profileName = document.getElementById("profile-name");
+const profileInfo = document.getElementById("profile-info");
+
+editButton.addEventListener("click", () => {
+  inputName.value = profileName.textContent;
+  inputAbout.value = profileInfo.textContent;
+  popup.classList.add("open");
 });
+
 closePopup.addEventListener("click", () => {
-  popup.classList.remove("popup_opnened");
+  popup.classList.remove("open");
+});
+
+submit.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  profileName.textContent = inputName.value;
+  profileInfo.textContent = inputAbout.value;
+
+  popup.classList.remove("open");
 });

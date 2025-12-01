@@ -6,3 +6,8 @@
   background: #000000;
   box-sizing: border-box;
 }
+@media screen and(max-width:880px) {
+  .page {
+    max-width: 880px;
+  }
+}
