@@ -24,6 +24,10 @@
 
   color: #ffffff;
 }
+.profile__image {
+  width: 22px;
+  height: 22px;
+}
 .profile__info-paragraph {
 }
 .profile__info_name {
@@ -53,19 +57,31 @@
 }
 
 .profile__button-add {
+  width: 100%;
   max-width: 150px;
   margin-left: 150px;
-  cursor: pointer;
 }
 .profile__button-add-icon {
   width: 100%;
   padding: 0;
-  border: none;
+  cursor: pointer;
+
+  border: 2px solid #ffffff;
+  height: 50px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
 }
+
+.profile__button:hover {
+  opacity: 0.5;
+}
+
+.profile__button-add:hover {
+  opacity: 0.5;
+}
+
 @media screen and (max-width: 690px) {
   .profile {
     flex-direction: column;
@@ -75,15 +91,22 @@
   .profile__button-add {
     display: block;
     width: 282px;
+    max-width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   .profile__button-add-icon {
+    margin-top: 36px;
     width: 100%;
     display: block;
     padding: 0;
-    margin: 0;
     box-sizing: border-box;
+  }
+  .profile__info_name {
+    font-size: 22px;
+  }
+  .profile__info_text {
+    font-size: 14px;
   }
 }

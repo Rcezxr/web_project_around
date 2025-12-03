@@ -10,7 +10,8 @@ const profileName = document.getElementById("profile-name");
 const profileInfo = document.getElementById("profile-info");
 
 editButton.addEventListener("click", () => {
-  inputName.value = profileName.textContent;
+  console.log(profileName.textContent);
+  inputName.value = profileName.textContent.trim();
   inputAbout.value = profileInfo.textContent;
   popup.classList.add("open");
 });
@@ -26,4 +27,25 @@ submit.addEventListener("click", function (event) {
   profileInfo.textContent = inputAbout.value;
 
   popup.classList.remove("open");
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cardLikes = document.querySelectorAll(".card__like");
+
+  cardLikes.forEach((button, index) => {
+    const img = button.querySelector("img");
+
+    const normal = "images/elements/Group.png";
+    const likedSrc = "images/elements/blacklike.png";
+
+    img.dataset.normal = normal;
+    img.dataset.liked = likedSrc;
+
+    let liked = img.src.endsWith(likedSrc);
+
+    button.addEventListener("click", (e) => {
+      liked = !liked;
+      img.src = liked ? likedSrc : normal;
+    });
+  });
 });
