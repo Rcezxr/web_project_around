@@ -16,7 +16,6 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
 
   max-width: 415px;
 
@@ -28,12 +27,12 @@
   width: 22px;
   height: 22px;
 }
-.profile__info-paragraph {
-}
+
 .profile__info_name {
   max-width: 373;
   font-size: 42px;
   margin: 0;
+  margin-bottom: 8px;
 }
 .profile__info_text {
   max-width: 415px;
@@ -44,6 +43,7 @@
   max-width: 24px;
   max-height: 24px;
   margin-left: 18px;
+  margin-bottom: 20px;
 }
 .profile__button-info {
   padding: 0;

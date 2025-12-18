@@ -12,7 +12,7 @@ const profileInfo = document.getElementById("profile-info");
 editButton.addEventListener("click", () => {
   console.log(profileName.textContent);
   inputName.value = profileName.textContent.trim();
-  inputAbout.value = profileInfo.textContent;
+  inputAbout.value = profileInfo.textContent.trim();
   popup.classList.add("open");
 });
 
